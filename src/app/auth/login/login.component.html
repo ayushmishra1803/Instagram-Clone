@@ -1,8 +1,11 @@
 <div fxLayout fxLayoutAlign="center" fxLayoutGap="10px" class="loginstart">
   <section>
-    <img src="assets/images/login/insta.jpg" />
+    <img
+      style="width: 350px; height: 550px;"
+      src="assets/images/login/insta.jpg"
+    />
   </section>
-  <section fxLayout="column" fxLayoutGap="15px">
+  <section fxLayout="column" fxLayoutGap="10px">
     <mat-card class="card">
       <mat-card-header fxLayout="column" fxLayoutAlign="center center">
         <mat-card-title><h1 class="title">Instagram</h1></mat-card-title>
@@ -13,25 +16,33 @@
           #f="ngForm"
           fxLayout="column"
           fxLayoutAlign="center center"
-        ><br><br>
-          <mat-form-field>
+        >
+          <br /><br />
+          <mat-form-field appearance="outline">
             <mat-label>Username</mat-label>
-            <input matInput type="text" name="username" />
+            <input matInput type="text" name="username" ngModel required />
           </mat-form-field>
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput type="text" name="password" />
+            <input matInput type="text" name="password" ngModel required />
           </mat-form-field>
-          <mat-card-actions>
-            <button mat-raised-button color="primary" type="submit">
+          <mat-card-actions
+            ><br />
+            <button
+              class="button"
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="f.invalid"
+            >
               Login
             </button>
           </mat-card-actions>
         </form>
         <br />
-        <hr />
-        <section fxLayout fxLayoutAlign="center">Or</section>
-        <hr />
+        <p style="text-align: center;">
+          --------------------------- OR ---------------------------
+        </p>
         <br />
         <section fxLayout fxLayoutAlign="center" style="cursor: pointer;">
           <img
@@ -40,7 +51,6 @@
           />&nbsp;
           <p style="font-size: 18px;">Log in with Facebook</p>
         </section>
-        <br /><br />
         <section fxLayout fxLayoutAlign="center" style="cursor: pointer;">
           <p routerLink="/forgetpassword">Forgot Password?</p>
         </section>
@@ -49,9 +59,17 @@
     <section>
       <mat-card>
         <mat-card-content fxLayoutAlign="center">
-          Don't have an account? &nbsp;<a routerLink="/signup">Sign up</a>
+          Don't have an account?
+          <a class="link" routerLink="signup"> Sign up</a>
         </mat-card-content>
       </mat-card>
     </section>
+    <section style="text-align: center;">
+      <p>Get the app</p>
+    </section>
+    <section fxLayoutAlign="center">
+      <img style="height: 40px;" src="assets\images\signup\app.jpg" />
+    </section>
   </section>
 </div>
+
