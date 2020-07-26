@@ -1,1 +1,65 @@
-<p>signup works!</p>
+<div style="background-color: rgb(253, 250, 250);" fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+  <section  style="padding: 20px;">
+    <mat-card>
+      <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+        <mat-card-title
+          ><h1 style="text-align: center; font-size: 30px;">
+            Instagram
+          </h1></mat-card-title
+        >
+        <mat-card-subtitle
+          ><h4 style="text-align: center;">
+            Sign up to see photos and videos <br />from your friends.
+          </h4></mat-card-subtitle
+        >
+      </mat-card-header>
+      <div fxLayoutAlign="center center">
+        <button style="width: 250px;" mat-raised-button color="primary">
+          Log in with Facebook</button
+        ><br />
+      </div>
+      <br />
+      <p style="text-align: center;">OR</p>
+      <hr />
+      <mat-card-content>
+        <form
+          (ngSubmit)="submit(f)"
+          #f="ngForm"
+          fxLayout="column"
+          fxLayoutAlign="center center"
+        >
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" name="emaile" />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Full Name</mat-label>
+            <input matInput type="text" name="fullname" />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" name="username" />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="text" name="password" />
+          </mat-form-field>
+          <mat-card-actions>
+            <button
+              style="width: 250px;"
+              mat-raised-button
+              color="primary"
+              type="submit"
+            >
+              Sign up
+            </button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+      <mat-card-footer style="text-align: center; padding-bottom: 15px;"
+        >By signing up, you agree to our Terms , Data <BR />Policy and Cookies
+        Policy .</mat-card-footer
+      >
+    </mat-card>
+  </section>
+</div>
