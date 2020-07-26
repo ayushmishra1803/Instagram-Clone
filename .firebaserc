@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "instagram-bf119": {
+      "hosting": {
+        "instagram": [
+          "instagram-bf119"
+        ]
+      }
+    }
+  }
+}

@@ -3,8 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+         production: false,
+         firebase: {
+           apiKey: 'AIzaSyBjf-IKmHih7ZdrynYeymLyzPATqCuQ-Hw',
+           authDomain: 'instagram-bf119.firebaseapp.com',
+           databaseURL: 'https://instagram-bf119.firebaseio.com',
+           projectId: 'instagram-bf119',
+           storageBucket: 'instagram-bf119.appspot.com',
+           messagingSenderId: '534488810270',
+           appId: '1:534488810270:web:a82fbeb3a58a5545e03f0f',
+           measurementId: 'G-K2HGK9NVPY',
+         },
+       };
 
 /*
  * For easier debugging in development mode, you can import the following file
