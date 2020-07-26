@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   submit(f: NgForm) {
     this.service.login({
       username:f.value.username,
-      password:f.value.password
+      password:f.value.passwortd
     })
   }
 }
