@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "instagram"
+    }
+  },
+  "defaultProject": "instagram",
+  "cli": {
+    "analytics": false
+  }
 }
