@@ -5,16 +5,19 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
   constructor(private service: AuthService) {}
 
   ngOnInit(): void {}
   submit(f: NgForm) {
-    this.service.login({
-      username:f.value.username,
-      password:f.value.password
-    })
+    this.service.signup({
+      email: f.value.email,
+      number: f.value.phone,
+      Full_Name: f.value.fullname,
+      username: f.value.username,
+      password: f.value.password,
+    });
   }
 }
