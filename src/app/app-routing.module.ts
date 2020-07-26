@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   //authmodule
   {path:"login",component:LoginComponent},
-  {path:"sigup" ,component:SignupComponent},
+  {path:"signup" ,component:SignupComponent},
   {path:"forgetpassword",component:ForgetpasswordComponent}
 ];
 
