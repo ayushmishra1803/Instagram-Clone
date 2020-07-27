@@ -15,6 +15,12 @@ export class AuthService {
     this.auth.signInWithEmailAndPassword(data.username,data.password);
   }
   signup(data: Signup) {
+    this.auth.createUserWithEmailAndPassword(data.email,data.password).then((re)=>
+    {console.log(re+"Success");
+    }).catch(re=>{
+      console.log(re+"Failed");
+
+    });
     this.db.collection("Users").add(data);
     console.log('signup');
   }
