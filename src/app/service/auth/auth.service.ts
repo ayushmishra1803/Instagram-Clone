@@ -12,6 +12,7 @@ export class AuthService {
 
   login(data: Login) {
     console.log('login');
+    this.auth.signInWithEmailAndPassword(data.username,data.password);
   }
   signup(data: Signup) {
     this.db.collection("Users").add(data);
