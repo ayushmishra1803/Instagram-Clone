@@ -8,26 +8,29 @@ import { AngularFireAuth } from '@angular/fire/auth';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private db:AngularFirestore ,private auth:AngularFireAuth) {}
+  constructor(private db: AngularFirestore, private auth: AngularFireAuth) {}
 
   login(data: Login) {
     console.log('login');
-    this.auth.signInWithEmailAndPassword(data.username,data.password).then(re=>{
-      console.log(re+"Success");
-
-    }).catch((re)=>{
-      console.log(re+"Failed");
-
-    });
+    this.auth
+      .signInWithEmailAndPassword(data.username, data.password)
+      .then((re) => {
+        console.log(re + 'Success');
+      })
+      .catch((re) => {
+        console.log(re + 'Failed');
+      });
   }
   signup(data: Signup) {
-    this.auth.createUserWithEmailAndPassword(data.email,data.password).then((re)=>
-    {console.log(re+"Success");
-    }).catch(re=>{
-      console.log(re+"Failed");
-
-    });
-    this.db.collection("Users").add(data);
+    this.auth
+      .createUserWithEmailAndPassword(data.email, data.password)
+      .then((re) => {
+        console.log(re + 'Success');
+      })
+      .catch((re) => {
+        console.log(re + 'Failed');
+      });
+    this.db.collection('Users').add(data);
     console.log('signup');
   }
   forgetPassword(data: Forgetpassword) {
