@@ -12,8 +12,6 @@ export class ForgetpasswordComponent implements OnInit {
 
   ngOnInit(): void {}
   submit(f: NgForm) {
-    this.service.forgetPassword({
-      email: f.value.email,
-    });
+    this.service.forgetPassword(f.value.email);
   }
 }

@@ -33,7 +33,8 @@ export class AuthService {
     this.db.collection('Users').add(data);
     console.log('signup');
   }
-  forgetPassword(data: Forgetpassword) {
+  forgetPassword(data:string) {
     console.log('ForgetPassword');
+    this.auth.sendPasswordResetEmail(data);
   }
 }
