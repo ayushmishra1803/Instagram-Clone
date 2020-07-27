@@ -12,7 +12,13 @@ export class AuthService {
 
   login(data: Login) {
     console.log('login');
-    this.auth.signInWithEmailAndPassword(data.username,data.password);
+    this.auth.signInWithEmailAndPassword(data.username,data.password).then(re=>{
+      console.log(re+"Success");
+
+    }).catch((re)=>{
+      console.log(re+"Failed");
+
+    });
   }
   signup(data: Signup) {
     this.auth.createUserWithEmailAndPassword(data.email,data.password).then((re)=>
