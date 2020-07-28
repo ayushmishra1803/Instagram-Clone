@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [],
   imports: [
@@ -16,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatSnackBarModule,
     MatInputModule,
+    MatToolbarModule,
   ],
   exports: [
     FlexLayoutModule,
@@ -24,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatSnackBarModule,
     MatInputModule,
+    MatToolbarModule,
   ],
 })
 export class MaterialModule {}

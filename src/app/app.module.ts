@@ -1,3 +1,4 @@
+import { HomeModule } from './main/module/home/home/home.module';
 import { MaterialModule } from './module/material/material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,13 +13,16 @@ import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.co
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import {AngularFireAuthModule}from "@angular/fire/auth"
+import {AngularFireAuthModule}from "@angular/fire/auth";
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
     ForgetpasswordComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,7 @@ import {AngularFireAuthModule}from "@angular/fire/auth"
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

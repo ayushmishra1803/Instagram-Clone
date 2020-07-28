@@ -1,3 +1,4 @@
+import { HomeComponent } from './main/componets/home/home.component';
 import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -9,7 +10,9 @@ const routes: Routes = [
   //authmodule
   {path:"login",component:LoginComponent},
   {path:"signup" ,component:SignupComponent},
-  {path:"forgetpassword",component:ForgetpasswordComponent}
+  {path:"forgetpassword",component:ForgetpasswordComponent},
+  //main
+  {path:"home",component:HomeComponent}
 ];
 
 @NgModule({
