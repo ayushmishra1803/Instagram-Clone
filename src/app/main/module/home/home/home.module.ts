@@ -1,3 +1,4 @@
+import { EditProfileComponent } from './../../../componets/profile/edit-profile/edit-profile.component';
 import { ToolbarComponent } from './../../../toolbar/toolbar.component';
 import { AppRoutingModule } from './../../../../app-routing.module';
 import { AppModule } from './../../../../app.module';
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     HomeComponent,
     ToolbarComponent,
+    EditProfileComponent
   ],
   imports: [CommonModule, MaterialModule, AppRoutingModule],
 })

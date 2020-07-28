@@ -14,7 +14,6 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {AngularFireAuthModule}from "@angular/fire/auth";
-import { EditProfileComponent } from './main/components/profile/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { EditProfileComponent } from './main/components/profile/edit-profile/edi
     LoginComponent,
     SignupComponent,
     ForgetpasswordComponent,
-    EditProfileComponent,
 
 
   ],

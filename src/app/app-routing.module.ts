@@ -1,3 +1,4 @@
+import { EditProfileComponent } from './main/componets/profile/edit-profile/edit-profile.component';
 import { ProfileComponent } from './main/componets/profile/profile.component';
 import { HomeComponent } from './main/componets/home/home.component';
 import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.component';
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path:"forgetpassword",component:ForgetpasswordComponent},
   //main
   {path:"home",component:HomeComponent},
-  {path:"profile",component:ProfileComponent}
+  //prfile
+  {path:"profile",component:ProfileComponent},
+  {path:"edit-profile",component:EditProfileComponent}
 ];
 
 @NgModule({
