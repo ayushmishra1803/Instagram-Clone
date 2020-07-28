@@ -1,1 +1,29 @@
 <app-toolbar></app-toolbar>
+<div
+  *ngFor="let profile of profile_data"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+>
+  <!-- <section>
+    <img src="nothing">
+    </section> -->
+  <section fxLayout fxLayoutAlign="center" fxLayoutGap="20px">
+    <section>
+      <h2>{{ profile.username }}</h2>
+    </section>
+    <section>
+      <button mat-raised-button>
+        Edit Profile
+      </button>
+    </section>
+    <section>
+      <button mat-raised-button><mat-icon>settings</mat-icon></button>
+    </section>
+  </section>
+  <section fxLayout fxLayoutAlign="center" fxLayoutGap="30px">
+    <section>{{ profile.number }}<b> posts</b></section>
+    {{ profile.number }} <b>followers </b>
+    <section></section>
+    <section>{{ profile.number }}<b> following</b></section>
+  </section>
+</div>
