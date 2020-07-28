@@ -4,11 +4,13 @@ import { Forgetpassword } from './../../interface/auth/forgetpassword/forgetpass
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private db: AngularFirestore, private auth: AngularFireAuth) {}
+  private logedinUser:string
+  constructor(private db: AngularFirestore, private auth: AngularFireAuth,private router:Router) {}
 
   login(data: Login) {
     console.log('login');
@@ -16,9 +18,12 @@ export class AuthService {
       .signInWithEmailAndPassword(data.username, data.password)
       .then((re) => {
         console.log(re + 'Success');
+        this.authstatus();
+        this.router.navigate(['/home'])
       })
       .catch((re) => {
         console.log(re + 'Failed');
+        this.router.navigate(['/login'])
       });
   }
   signup(data: Signup) {
@@ -26,15 +31,28 @@ export class AuthService {
       .createUserWithEmailAndPassword(data.email, data.password)
       .then((re) => {
         console.log(re + 'Success');
+          this.db.collection('Users').add(data);
+          console.log('signup');
+        this.router.navigate(['/login'])
       })
       .catch((re) => {
         console.log(re + 'Failed');
+        this.router.navigate(['/login'])
       });
-    this.db.collection('Users').add(data);
-    console.log('signup');
+
   }
   forgetPassword(data:string) {
     console.log('ForgetPassword');
     this.auth.sendPasswordResetEmail(data);
+  }
+  authstatus(){
+    this.auth.authState.subscribe(re=>{
+      console.log(re.email);
+      this.logedinUser=re.email
+
+    })
+  }
+  getlogedinuser(){
+    return this.logedinUser
   }
 }
