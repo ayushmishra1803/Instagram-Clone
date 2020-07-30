@@ -4,5 +4,5 @@ export interface profile {
   number:string;
   password:string;
   username:string;
-  //Ayush Msihra
+  //Ayush Mishra
 }
